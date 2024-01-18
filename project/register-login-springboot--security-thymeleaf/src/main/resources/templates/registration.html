@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <a class="nav-link active" aria-current="page" href="#" th:href="@{/">Registration and Login Module</a>
+       
+   </div>
+</nav>
+
+          <div class="container">
+               <div class="row">
+                  <div class="col-md6 col-md-offset">
+                            
+                            <!-- success message  -->
+                             <div th:if="${param.success}">
+                                <div class="alert alert-info">You have Successfully Registered to our App</div>
+                             </div>
+                             
+                             
+                             <h1>Registration</h1>
+                             <form th:action="@{/registration}" method="post" th:object="${user}"></form>
+                  </div>
+               </div>
+                
+          </div>
+</body>
+</html>
